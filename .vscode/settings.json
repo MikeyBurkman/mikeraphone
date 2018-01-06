@@ -1,0 +1,5 @@
+{
+    "elm.formatOnSave": true,
+    "elm.userProjectMaxCommentSize": 20,
+    "files.autoSave": "off"
+}

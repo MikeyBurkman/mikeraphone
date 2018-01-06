@@ -1,24 +1,25 @@
 {
-    "name": "mikeraphone",
-    "version": "1.0.0",
-    "description": "",
-    "main": "bundle.js",
-    "scripts": {
-      "install": "cd node_modules/elm && node install.js",
-      "make": "elm make ./src/Main.elm --output ./bundle.js",
-      "make-debug": "elm make ./src/Main.elm --output ./bundle.js --debug",
-      "format": "elm-format src --yes",
-      "start": "npm run make && concurrently \"http-server\" \"opn http://localhost:8080\"",
-      "debug": "npm run make-debug && concurrently \"http-server\" \"opn http://localhost:8080\""
-    },
-    "dependencies": {
-      "concurrently": "^3.5.0",
-      "elm": "^0.18.0",
-      "elm-format": "^0.6.1-alpha",
-      "http-server": "^0.10.0",
-      "opn-cli": "^3.1.0"
-    },
-    "devDependencies": {},
-    "author": "",
-    "license": "MIT"
-  }
+  "name": "mikeraphone",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bundle.js",
+  "scripts": {
+    "install": "cd node_modules/elm && node install.js",
+    "make": "elm make ./src/Main.elm --output ./bundle.js",
+    "make-debug": "elm make --warn ./src/Main.elm --output ./bundle.js --debug",
+    "format": "elm-format src --yes",
+    "start": "npm run make && concurrently \"http-server\" \"opn http://localhost:8080\"",
+    "debug": "elm-live ./src/Main.elm --output ./bundle.js --open --debug"
+  },
+  "dependencies": {
+    "concurrently": "^3.5.0",
+    "elm": "^0.18.0",
+    "elm-format": "^0.6.1-alpha",
+    "elm-live": "^2.7.5",
+    "http-server": "^0.10.0",
+    "opn-cli": "^3.1.0"
+  },
+  "devDependencies": {},
+  "author": "",
+  "license": "MIT"
+}
